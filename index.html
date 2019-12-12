@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <style>
+        .width {
+            width: 100% !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_YvNBdo.json" background="transparent" speed="1" autoplay class="width">
+        </lottie-player>
+    </div>
+
+    <script>
+        const player = document.querySelector('lottie-player');
+
+        setTimeout(function() {
+            player.pause();
+        }, 2000);
+
+        setTimeout(function() {
+            player.play();
+        }, 3000);
+
+        player.addEventListener("error", function() {
+            var img = document.createElement("img");
+            img.src = "https://github.com/tsimhawj/json/blob/master/spiral.png?raw=true";
+            img.className = "width";
+            var src = document.getElementById("header");
+            src.appendChild(img);
+        });
+    </script>
+
+</body>
+
+</html>
